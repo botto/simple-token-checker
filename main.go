@@ -7,7 +7,7 @@ import (
 	"net/http"
 
 	"github.com/caarlos0/env"
-	"github.com/gobuffalo/packr/v2"
+	"github.com/gobuffalo/packr"
 	"github.com/hashicorp/vault/api"
 )
 
@@ -38,7 +38,7 @@ func main() {
 		log.Fatalf("Problem with vault client init: %s", err)
 	}
 	vault.SetToken(cfg.VaultToken)
-	box := packr.New("box", "./assets")
+	box := packr.NewBox("./assets")
 	indexTpl, err = box.FindString("index.html")
 	if err != nil {
 		log.Fatal("Could not parse index.html")
