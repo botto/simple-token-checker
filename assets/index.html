@@ -1,0 +1,49 @@
+<html>
+    <head>
+    <title></title>
+    </head>
+    <body>
+        
+    </body>
+</html>
+
+<html>
+  <head>
+    <title>Page not found</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: system, sans-serif;
+        background: #FCFAF2;
+        justify-items: center;
+      }
+      .content {
+        margin: auto auto;
+        background: #eee;
+        padding: 30px 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .token {
+        color: #2D6D4B;
+        font-weight: bolder;
+      }
+      .msg {
+        margin-top: 1rem;
+        font-size: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='content'>
+      <div><img src="/assets/images/yes.jpg" /></div>
+      <div class="msg">Your token <span class="token">{{ .Token }}</span> is valid!</div>
+    </div>
+  </body>
+</html>
